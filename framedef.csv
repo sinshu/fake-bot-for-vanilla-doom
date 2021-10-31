@@ -91,6 +91,10 @@
 0,0,chase,shotgun_attack73,shotgun_attack74
 0,1,face,shotgun_attack74,shotgun_attack1
 6,1,chase,shotgun_pain1,shotgun_pain2
-6,1,chase,shotgun_pain2,shotgun_pain3
+6,0,face,shotgun_pain2,shotgun_pain3
 6,1,chase,shotgun_pain3,shotgun_pain4
-6,1,chase,shotgun_pain4,shotgun_run1
+6,0,face,shotgun_pain4,shotgun_pain5
+6,1,chase,shotgun_pain5,shotgun_pain6
+6,0,face,shotgun_pain6,shotgun_pain7
+6,1,chase,shotgun_pain7,shotgun_pain8
+6,0,pain,shotgun_pain8,shotgun_attack1

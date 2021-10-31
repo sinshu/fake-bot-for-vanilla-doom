@@ -55,13 +55,26 @@ public class DehExporter
         {
             writer.WriteLine("Thing " + csvThing.Type + " (Fake Bot " + csvThing.Type + ")");
             writer.WriteLine("Initial frame = " + GetSourceFrame(csvThing.Spawn, csvFrames, sourceFrames).Number);
+            writer.WriteLine("Hit points = 100");
             writer.WriteLine("First moving frame = " + GetSourceFrame(csvThing.Run, csvFrames, sourceFrames).Number);
+            writer.WriteLine("Alert sound = 0");
+            writer.WriteLine("Reaction time = 8");
+            writer.WriteLine("Attack sound = 0");
             writer.WriteLine("Injury frame = " + GetSourceFrame(csvThing.Pain, csvFrames, sourceFrames).Number);
+            writer.WriteLine("Pain chance = 255");
+            writer.WriteLine("Pain sound = 0");
             writer.WriteLine("Close attack frame = 0");
             writer.WriteLine("Far attack frame = 0");
             writer.WriteLine("Death frame = 158");
             writer.WriteLine("Exploding frame = 165");
-            writer.WriteLine("Bits = 4194342");
+            writer.WriteLine("Death sound = 0");
+            writer.WriteLine("Speed = 8");
+            writer.WriteLine("Width = " + Fixed.FromInt(20).Data);
+            writer.WriteLine("Height = " + Fixed.FromInt(56).Data);
+            writer.WriteLine("Mass = 100");
+            writer.WriteLine("Missile damag = 0");
+            writer.WriteLine("Action sound = 0");
+            writer.WriteLine("Bits = 20980742");
             writer.WriteLine("Respawn frame = 0");
             writer.WriteLine();
         }
@@ -154,6 +167,9 @@ public class DehExporter
 
             case "refire":
                 return 618;
+
+            case "pain":
+                return 376;
 
             case "shotgun":
                 return 218;

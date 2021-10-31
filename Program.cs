@@ -11,11 +11,6 @@ public class Program
         var csvFrameDef = new CsvFrameDef("framedef.csv");
         var csvThingDef = new CsvThingDef("thingdef.csv");
 
-        foreach (var thing in csvThingDef.Things)
-        {
-            Console.WriteLine(thing);
-        }
-
         var exporter = new DehExporter(csvThingDef, csvFrameDef);
         using (var writer = new StreamWriter("test.deh"))
         {
