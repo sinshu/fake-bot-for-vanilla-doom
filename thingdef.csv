@@ -1,7 +1,7 @@
 ﻿type,spawn,run,pain,name,hp,speed,color
 2,shotgun_look,shotgun_run1,shotgun_pain1,Trooper,100,6,green
 3,shotgun_look,shotgun_run1,shotgun_pain1,Sergeant,100,8,indigo
-4,plasma_look,plasma_run1,plasma_pain1,Archvile,100,12,brown
+4,plasma_look,plasma_run1,plasma_pain1,Archvile,100,10,brown
 6,rocket_look,rocket_run1,rocket_pain1,Revenant,100,8,indigo
 9,rocket_look,rocket_run1,rocket_pain1,Mancubus,200,6,brown
 11,chaingun_look,chaingun_run1,chaingun_pain1,Chaingunner,100,8,red
@@ -12,8 +12,8 @@
 16,ssg_look,ssg_run1,ssg_pain1,Baron of Hell,200,8,red
 18,ssg_look,ssg_run1,ssg_pain1,Hell Knight,100,8,green
 19,shotgun_look,shotgun_run1,shotgun_pain1,Lost Soul,100,12,red
-20,plasma_look,plasma_run1,plasma_pain1,Spiderdemon,200,8,indigo
-21,plasma_look,plasma_run1,plasma_pain1,Arachnotron,100,10,green
+20,plasma_look,plasma_run1,plasma_pain1,Spiderdemon,200,12,indigo
+21,plasma_look,plasma_run1,plasma_pain1,Arachnotron,100,8,green
 22,rocket_look,rocket_run1,rocket_pain1,Cyberdemon,200,12,red
 23,ssg_look,ssg_run1,ssg_pain1,Pain Elemental,100,12,brown
-24,plasma_look,plasma_run1,plasma_pain1,SS Nazi,100,8,red
+24,plasma_look,plasma_run1,plasma_pain1,SS Nazi,100,6,red
