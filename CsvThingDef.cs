@@ -18,8 +18,12 @@ public class CsvThingDef
             var spawn = split[1];
             var run = split[2];
             var pain = split[3];
+            var name = split[4];
+            var hp = int.Parse(split[5]);
+            var speed = int.Parse(split[6]);
+            var color = split[7];
 
-            var thing = new CsvThing(type, spawn, run, pain);
+            var thing = new CsvThing(type, spawn, run, pain, name, hp, speed, color);
             things.Add(thing);
         }
     }
@@ -35,13 +39,21 @@ public class CsvThing
     public readonly string Spawn;
     public readonly string Run;
     public readonly string Pain;
+    public readonly string Name;
+    public readonly int Hp;
+    public readonly int Speed;
+    public readonly string Color;
 
-    public CsvThing(int type, string spawn, string run, string pain)
+    public CsvThing(int type, string spawn, string run, string pain, string name, int hp, int speed, string color)
     {
         Type = type;
         Spawn = spawn;
         Run = run;
         Pain = pain;
+        Name = name;
+        Hp = hp;
+        Speed = speed;
+        Color = color;
     }
 
     public override string ToString()

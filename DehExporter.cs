@@ -80,6 +80,7 @@ public class DehExporter
         writer.WriteLine("Doom version = 19");
         writer.WriteLine("Patch format = 6");
         writer.WriteLine();
+        writer.WriteLine();
     }
 
     private void WriteOptions(StreamWriter writer)
@@ -108,9 +109,9 @@ public class DehExporter
     {
         foreach (var csvThing in csvThingDef.Things)
         {
-            writer.WriteLine("Thing " + csvThing.Type + " (Fake Bot " + csvThing.Type + ")");
+            writer.WriteLine("Thing " + csvThing.Type + " (" + csvThing.Name + ")");
             writer.WriteLine("Initial frame = " + GetSourceFrame(csvThing.Spawn, csvFrames, sourceFrames).Number);
-            writer.WriteLine("Hit points = 100");
+            writer.WriteLine("Hit points = " + csvThing.Hp);
             writer.WriteLine("First moving frame = " + GetSourceFrame(csvThing.Run, csvFrames, sourceFrames).Number);
             writer.WriteLine("Alert sound = 0");
             writer.WriteLine("Reaction time = 8");
@@ -123,16 +124,25 @@ public class DehExporter
             writer.WriteLine("Death frame = 158");
             writer.WriteLine("Exploding frame = 165");
             writer.WriteLine("Death sound = 0");
-            writer.WriteLine("Speed = 8");
+            writer.WriteLine("Speed = " + csvThing.Speed);
             writer.WriteLine("Width = " + Fixed.FromInt(20).Data);
             writer.WriteLine("Height = " + Fixed.FromInt(56).Data);
             writer.WriteLine("Mass = 100");
             writer.WriteLine("Missile damag = 0");
             writer.WriteLine("Action sound = 0");
-            writer.WriteLine("Bits = 20980742");
+            writer.WriteLine("Bits = " + GetBitsFromColor(csvThing.Color));
             writer.WriteLine("Respawn frame = 0");
             writer.WriteLine();
         }
+
+        writer.WriteLine("Thing 30 (Demon spawn fire)");
+        writer.WriteLine("Initial frame = 130");
+        writer.WriteLine();
+
+        writer.WriteLine("Thing 37 (Arachnotron projectile)");
+        writer.WriteLine("Initial frame = 107");
+        writer.WriteLine("Death frame = 109");
+        writer.WriteLine();
     }
 
     private void ExportFrames(StreamWriter writer)
@@ -205,6 +215,27 @@ public class DehExporter
         }
 
         throw new Exception();
+    }
+
+    private static int GetBitsFromColor(string color)
+    {
+        switch (color)
+        {
+            case "green":
+                return 20980742;
+
+            case "indigo":
+                return 88089606;
+
+            case "brown":
+                return 155198470;
+
+            case "red":
+                return 222307334;
+
+            default:
+                throw new Exception();
+        }
     }
 
     private static int GetCodep(string action)
