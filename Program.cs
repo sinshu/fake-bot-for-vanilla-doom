@@ -12,11 +12,6 @@ public class Program
         var csvThingDef = new CsvThingDef("thingdef.csv");
 
         var exporter = new DehExporter(csvThingDef, csvFrameDef);
-        using (var writer = new StreamWriter("test.deh"))
-        {
-            exporter.ExportThings(writer);
-            exporter.ExportFrames(writer);
-            exporter.ExportPointers(writer);
-        }
+        exporter.Export("test.deh");
     }
 }

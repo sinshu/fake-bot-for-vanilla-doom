@@ -21,6 +21,8 @@ public class DehExporter
         var monsterEnd = 762;
         var demonStart = 477;
         var demonEnd = 489;
+        var fireStart = 791;
+        var fireEnd = 798;
 
         var normalSourceFrames = new Queue<MobjStateDef>();
         var demonSourceFrames = new Queue<MobjStateDef>();
@@ -40,6 +42,14 @@ public class DehExporter
             }
         }
 
+        for (var i = fireStart; i <= fireEnd; i++)
+        {
+            if (DoomInfo.States[i].MobjAction != null)
+            {
+                normalSourceFrames.Enqueue(DoomInfo.States[i]);
+            }
+        }
+
         csvFrames = csvFrameDef.Frames.ToArray();
         sourceFrames = new MobjStateDef[csvFrames.Length];
 
@@ -49,7 +59,52 @@ public class DehExporter
         }
     }
 
-    public void ExportThings(StreamWriter writer)
+    public void Export(string path)
+    {
+        using (var writer = new StreamWriter(path))
+        {
+            WriteHeader(writer);
+            ExportThings(writer);
+            ExportFrames(writer);
+            ExportPointers(writer);
+            WriteOptions(writer);
+        }
+    }
+
+    private void WriteHeader(StreamWriter writer)
+    {
+        writer.WriteLine("Patch File for DeHackEd v3.0");
+        writer.WriteLine();
+        writer.WriteLine("# Note: Use the pound sign ('#') to start comment lines.");
+        writer.WriteLine();
+        writer.WriteLine("Doom version = 19");
+        writer.WriteLine("Patch format = 6");
+        writer.WriteLine();
+    }
+
+    private void WriteOptions(StreamWriter writer)
+    {
+        writer.WriteLine("Misc 0");
+        writer.WriteLine("Monsters Infight = 221");
+        writer.WriteLine("");
+        writer.WriteLine("Text 6 6");
+        writer.WriteLine("manatkplpain");
+        writer.WriteLine("");
+        writer.WriteLine("Text 6 6");
+        writer.WriteLine("vilatkdshtgn");
+        writer.WriteLine("");
+        writer.WriteLine("Text 5 5");
+        writer.WriteLine("metaldbopn");
+        writer.WriteLine("");
+        writer.WriteLine("Text 6 6");
+        writer.WriteLine("bspwlkdbload");
+        writer.WriteLine("");
+        writer.WriteLine("Text 4 5");
+        writer.WriteLine("hoofdbcls");
+        writer.WriteLine("");
+    }
+
+    private void ExportThings(StreamWriter writer)
     {
         foreach (var csvThing in csvThingDef.Things)
         {
@@ -80,7 +135,7 @@ public class DehExporter
         }
     }
 
-    public void ExportFrames(StreamWriter writer)
+    private void ExportFrames(StreamWriter writer)
     {
         for (var i = 0; i < csvFrames.Length; i++)
         {
@@ -99,7 +154,7 @@ public class DehExporter
         }
     }
 
-    public void ExportPointers(StreamWriter writer)
+    private void ExportPointers(StreamWriter writer)
     {
         for (var i = 0; i < csvFrames.Length; i++)
         {
@@ -173,6 +228,27 @@ public class DehExporter
 
             case "shotgun":
                 return 218;
+
+            case "chaingun":
+                return 185;
+
+            case "rocket":
+                return 685;
+
+            case "plasma":
+                return 648;
+
+            case "ssg":
+                return 255;
+
+            case "reload1":
+                return 603;
+
+            case "reload2":
+                return 635;
+
+            case "reload3":
+                return 676;
 
             default:
                 throw new Exception();
