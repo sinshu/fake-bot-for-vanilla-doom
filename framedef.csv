@@ -90,7 +90,7 @@
 3,1,face,shotgun_attack72,shotgun_attack73
 0,0,chase,shotgun_attack73,shotgun_attack74
 0,1,face,shotgun_attack74,shotgun_attack1
-6,1,chase,shotgun_pain1,shotgun_pain2
+6,1,none,shotgun_pain1,shotgun_pain2
 6,1,chase,shotgun_pain2,shotgun_pain3
 6,1,chase,shotgun_pain3,shotgun_pain4
 6,1,chase,shotgun_pain4,shotgun_pain5
@@ -128,7 +128,7 @@
 5,1,face,chaingun_attack14,chaingun_attack15
 5,0,chase,chaingun_attack15,chaingun_attack16
 5,1,face,chaingun_attack16,chaingun_attack1
-6,1,chase,chaingun_pain1,chaingun_pain2
+6,1,none,chaingun_pain1,chaingun_pain2
 6,1,chase,chaingun_pain2,chaingun_pain3
 6,1,chase,chaingun_pain3,chaingun_pain4
 6,1,chase,chaingun_pain4,chaingun_pain5
@@ -190,7 +190,7 @@
 0,1,face,rocket_attack38,rocket_attack39
 0,0,chase,rocket_attack39,rocket_attack40
 0,1,face,rocket_attack40,rocket_attack1
-6,1,chase,rocket_pain1,rocket_pain2
+6,1,none,rocket_pain1,rocket_pain2
 6,1,chase,rocket_pain2,rocket_pain3
 6,1,chase,rocket_pain3,rocket_pain4
 6,1,chase,rocket_pain4,rocket_pain5
@@ -218,7 +218,7 @@
 4,1,plasma,plasma_attack4,plasma_attack5
 4,0,chase,plasma_attack5,plasma_attack6
 4,1,face,plasma_attack6,plasma_attack1
-6,1,chase,plasma_pain1,plasma_pain2
+6,1,none,plasma_pain1,plasma_pain2
 6,1,chase,plasma_pain2,plasma_pain3
 6,1,chase,plasma_pain3,plasma_pain4
 6,1,chase,plasma_pain4,plasma_pain5
@@ -346,7 +346,7 @@
 3,0,chase,ssg_attack104,ssg_attack105
 3,1,face,ssg_attack105,ssg_attack106
 0,0,reload3,ssg_attack106,ssg_attack2
-6,1,chase,ssg_pain1,ssg_pain2
+6,1,none,ssg_pain1,ssg_pain2
 6,1,chase,ssg_pain2,ssg_pain3
 6,1,chase,ssg_pain3,ssg_pain4
 6,1,chase,ssg_pain4,ssg_pain5

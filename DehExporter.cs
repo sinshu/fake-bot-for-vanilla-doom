@@ -135,6 +135,10 @@ public class DehExporter
             writer.WriteLine();
         }
 
+        writer.WriteLine("Thing 29 (Demon spawn cube)");
+        writer.WriteLine("Bits = 71192");
+        writer.WriteLine();
+
         writer.WriteLine("Thing 30 (Demon spawn fire)");
         writer.WriteLine("Initial frame = 130");
         writer.WriteLine();
@@ -162,6 +166,10 @@ public class DehExporter
             writer.WriteLine("Next frame = " + nextSourceFrame.Number);
             writer.WriteLine();
         }
+
+        writer.WriteLine("Frame 786");
+        writer.WriteLine("Duration = 200");
+        writer.WriteLine();
     }
 
     private void ExportPointers(StreamWriter writer)
@@ -175,6 +183,10 @@ public class DehExporter
             writer.WriteLine("Codep Frame = " + GetCodep(csvFrame.Action));
             writer.WriteLine();
         }
+
+        writer.WriteLine("Pointer 433 (Frame 787)");
+        writer.WriteLine("Codep Frame = 788");
+        writer.WriteLine();
     }
 
     private static MobjStateDef GetSourceFrame(CsvFrame csvFrame, Queue<MobjStateDef> normal, Queue<MobjStateDef> demon)
@@ -280,6 +292,9 @@ public class DehExporter
 
             case "reload3":
                 return 676;
+
+            case "none":
+                return 791;
 
             default:
                 throw new Exception();

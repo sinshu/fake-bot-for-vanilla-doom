@@ -1,19 +1,19 @@
 ﻿type,spawn,run,pain,name,hp,speed,color
-2,shotgun_look,shotgun_run1,shotgun_pain1,Trooper,100,6,green
-3,shotgun_look,shotgun_run1,shotgun_pain1,Sergeant,100,8,indigo
-4,plasma_look,plasma_run1,plasma_pain1,Archvile,100,10,brown
+2,shotgun_look,shotgun_run1,shotgun_pain1,Trooper,100,3,green
+3,shotgun_look,shotgun_run1,shotgun_pain1,Sergeant,100,4,indigo
+4,plasma_look,plasma_run1,plasma_pain1,Archvile,100,8,brown
 6,rocket_look,rocket_run1,rocket_pain1,Revenant,100,8,indigo
 9,rocket_look,rocket_run1,rocket_pain1,Mancubus,200,6,brown
-11,chaingun_look,chaingun_run1,chaingun_pain1,Chaingunner,100,8,red
-12,shotgun_look,shotgun_run1,shotgun_pain1,"	Imp",100,10,brown
-13,chaingun_look,chaingun_run1,chaingun_pain1,Demon,100,10,brown
-14,chaingun_look,chaingun_run1,chaingun_pain1,Spectre,100,12,indigo
-15,chaingun_look,chaingun_run1,chaingun_pain1,Cacodemon,150,8,green
-16,ssg_look,ssg_run1,ssg_pain1,Baron of Hell,200,8,red
-18,ssg_look,ssg_run1,ssg_pain1,Hell Knight,100,8,green
-19,shotgun_look,shotgun_run1,shotgun_pain1,Lost Soul,100,12,red
-20,plasma_look,plasma_run1,plasma_pain1,Spiderdemon,200,12,indigo
-21,plasma_look,plasma_run1,plasma_pain1,Arachnotron,100,8,green
-22,rocket_look,rocket_run1,rocket_pain1,Cyberdemon,200,12,red
-23,ssg_look,ssg_run1,ssg_pain1,Pain Elemental,100,12,brown
-24,plasma_look,plasma_run1,plasma_pain1,SS Nazi,100,6,red
+11,chaingun_look,chaingun_run1,chaingun_pain1,Chaingunner,100,4,red
+12,shotgun_look,shotgun_run1,shotgun_pain1,"	Imp",100,6,brown
+13,chaingun_look,chaingun_run1,chaingun_pain1,Demon,100,5,brown
+14,chaingun_look,chaingun_run1,chaingun_pain1,Spectre,100,6,indigo
+15,chaingun_look,chaingun_run1,chaingun_pain1,Cacodemon,100,8,green
+16,ssg_look,ssg_run1,ssg_pain1,Baron of Hell,200,6,red
+18,ssg_look,ssg_run1,ssg_pain1,Hell Knight,100,6,green
+19,shotgun_look,shotgun_run1,shotgun_pain1,Lost Soul,100,8,red
+20,plasma_look,plasma_run1,plasma_pain1,Spiderdemon,200,10,indigo
+21,plasma_look,plasma_run1,plasma_pain1,Arachnotron,100,6,green
+22,rocket_look,rocket_run1,rocket_pain1,Cyberdemon,200,10,red
+23,ssg_look,ssg_run1,ssg_pain1,Pain Elemental,100,8,brown
+24,plasma_look,plasma_run1,plasma_pain1,SS Nazi,100,4,red
