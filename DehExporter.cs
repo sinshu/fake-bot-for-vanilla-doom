@@ -66,6 +66,7 @@ public class DehExporter
             WriteHeader(writer);
             ExportThings(writer);
             ExportFrames(writer);
+            ExportAmmo(writer);
             ExportPointers(writer);
             WriteOptions(writer);
         }
@@ -168,8 +169,27 @@ public class DehExporter
         }
 
         writer.WriteLine("Frame 786");
-        writer.WriteLine("Duration = 200");
+        writer.WriteLine("Duration = 140");
         writer.WriteLine();
+    }
+
+    private void ExportAmmo(StreamWriter writer)
+    {
+        writer.WriteLine("Ammo 0 (Bullets)");
+        writer.WriteLine("Per ammo = 20");
+        writer.WriteLine("");
+
+        writer.WriteLine("Ammo 1 (Shells)");
+        writer.WriteLine("Per ammo = 8");
+        writer.WriteLine("");
+
+        writer.WriteLine("Ammo 2 (Cells)");
+        writer.WriteLine("Per ammo = 40");
+        writer.WriteLine("");
+
+        writer.WriteLine("Ammo 3 (Rockets)");
+        writer.WriteLine("Per ammo = 2");
+        writer.WriteLine("");
     }
 
     private void ExportPointers(StreamWriter writer)

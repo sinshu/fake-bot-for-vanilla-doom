@@ -12,7 +12,7 @@ public class Program
         var csvThingDef = new CsvThingDef("thingdef.csv");
 
         var exporter = new DehExporter(csvThingDef, csvFrameDef);
-        exporter.Export("test.deh");
+        exporter.Export("fbot.deh");
     }
 
     /*
